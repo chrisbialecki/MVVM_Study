@@ -24,5 +24,13 @@ namespace MVVM_Study_1
         {
             InitializeComponent();
         }
+
+        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            MVVM_Study_1.ViewModel.StudentViewModel _studentViewModelObject = new ViewModel.StudentViewModel();
+            _studentViewModelObject.LoadStudents();
+
+            StudentViewControl.DataContext = _studentViewModelObject;
+        }
     }
 }
