@@ -9,7 +9,6 @@
     <Grid>
         <StackPanel HorizontalAlignment="Left">
             <ItemsControl ItemsSource="{Binding Path=Students}">
-
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation = "Horizontal">
@@ -25,6 +24,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
+
             </ItemsControl>
         </StackPanel>
     </Grid>

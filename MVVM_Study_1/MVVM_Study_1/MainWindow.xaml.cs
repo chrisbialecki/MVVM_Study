@@ -30,7 +30,7 @@ namespace MVVM_Study_1
             MVVM_Study_1.ViewModel.StudentViewModel _studentViewModelObject = new ViewModel.StudentViewModel();
             _studentViewModelObject.LoadStudents();
 
-            StudentViewControlXXX.DataContext = _studentViewModelObject;
+            StudentViewControl.DataContext = _studentViewModelObject;
         }
     }
 }
