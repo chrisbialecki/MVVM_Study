@@ -26,6 +26,7 @@
                 </ItemsControl.ItemTemplate>
 
             </ItemsControl>
+
         </StackPanel>
     </Grid>
 </UserControl>
