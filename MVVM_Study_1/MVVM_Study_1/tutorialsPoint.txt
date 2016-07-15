@@ -1,4 +1,4 @@
 ﻿http://www.tutorialspoint.com/mvvm/mvvm_introduction.htm
 
-change made in branch VieModelLocator
+change made in master ( master grayed out but ticked)
 
