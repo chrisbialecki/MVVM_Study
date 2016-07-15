@@ -1,2 +1,4 @@
 ﻿http://www.tutorialspoint.com/mvvm/mvvm_introduction.htm
 
+change made in branch VieModelLocator
+
