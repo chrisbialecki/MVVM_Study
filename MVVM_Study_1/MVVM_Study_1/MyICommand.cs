@@ -35,7 +35,7 @@ namespace MVVM_Study_1
         }
 
 
-        bool CanExecute(object parameter)
+        bool ICommand.CanExecute(object parameter)
         {
             if (_TargetCanExecuteMethod != null)
             {
@@ -51,7 +51,7 @@ namespace MVVM_Study_1
         }
 
 
-        void Execute(object parameter)
+        void ICommand.Execute(object parameter)
         {
             if (_TargetExecuteMethod != null)
             {
