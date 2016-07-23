@@ -11,6 +11,28 @@ namespace MVVM_Study_1.ViewModel
 {
     public class StudentViewModel
     {
+        //create a command
+        public MyICommand DeleteCommand { get; set; }
+
+        //constructor
+        public StudentViewModel()
+        {
+            LoadStudents();
+            DeleteCommand = new MyICommand(OnDelete, CanDelete);
+        }
+
+        private void OnDelete()
+        {
+            Students.Remove(SelectedStudent);
+        }
+
+        private bool CanDelete()
+        {
+            return SelectedStudent != null;
+
+        }
+
+
         public ObservableCollection<Student> Students
         {
           get;
@@ -25,6 +47,18 @@ namespace MVVM_Study_1.ViewModel
             _students.Add(new Student { FirstName = "Linda", LastName = "Hamerski" });
 
             Students = _students;
+        }
+
+        private Student _selectedStudent;
+        public Student SelectedStudent
+        {
+            get { return _selectedStudent; }
+            set
+            {
+
+                _selectedStudent = value;
+                DeleteCommand.RaiseCanExecuteChanged();
+            }
         }
 
 
