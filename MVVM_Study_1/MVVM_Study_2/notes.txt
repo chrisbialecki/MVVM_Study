@@ -1,1 +1,6 @@
-﻿
+﻿MainWindow.xml line 13
+Implicit data templates 
+http://briannoyesblog.azurewebsites.net/2013/11/23/use-xtype-with-wpf-implicit-datatemplates/
+
+
+
