@@ -1,16 +1,17 @@
-﻿using System;
+﻿using MVVM_Study_2.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVVM_Study_2.ViewModel
+namespace MVVM_Study_2
 {
-    public class MainWindowViewModel : BindableBase
+   public class MainWindowViewModel : BindableBase
     {
         public MainWindowViewModel()
         {
-            NavCommand = new MyICommand<string>(OnNav);                
+            NavCommand = new MyICommand<string>(OnNav);
 
         }
 
@@ -22,25 +23,24 @@ namespace MVVM_Study_2.ViewModel
         {
             get { return _CurrentViewModel; }
             set { SetProperty(ref _CurrentViewModel, value); }
-        
+
         }
 
         public MyICommand<string> NavCommand { get; private set; }
-            
-            
+
+
         private void OnNav(string destination)
         {
             switch (destination)
-            { 
+            {
                 case "orders":
                     CurrentViewModel = orderViewModelModel;
                     break;
                 case "customers":
                 default:
                     CurrentViewModel = custListViewModel;
-                    break; 
+                    break;
             }
         }
-
     }
 }
