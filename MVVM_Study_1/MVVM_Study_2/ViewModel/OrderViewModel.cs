@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MVVM_Study_2.ViewModel
 {
-    public class OrderViewModel
+    public class OrderViewModel : BindableBase
     {
+
     }
 }
