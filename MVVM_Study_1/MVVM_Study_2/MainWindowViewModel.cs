@@ -23,7 +23,10 @@ namespace MVVM_Study_2
         public BindableBase CurrentViewModel
         {
             get { return _CurrentViewModel; }
-            set { SetProperty(ref _CurrentViewModel, value); }
+            set 
+            { 
+                SetProperty(ref _CurrentViewModel, value);
+            }           
         }
 
         
